@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 // REPLACE THIS STRING WITH YOUR REAL ONE
-const uri = "mongodb+srv://soulaymanelkharraz2006_db_user:wzVeEfPzccpsRxUu@cluster1.ykghf7g.mongodb.net/";
+const uri = process.env.MONGO_URI;
 
 mongoose.connect(uri) 
    .then(() => console.log("Connected to MongoDB !!!")) 
